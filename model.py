@@ -1,4 +1,5 @@
 from keras import layers, models
+from keras import optimizers
 
 model = models.Sequential()
 model.add(layers.Conv2D(32,(3,3),activation="relu",input_shape=(150,150,3)))
@@ -14,3 +15,7 @@ model.add(layers.Dense(512,activation="relu"))
 model.add(layers.Dense(10,activation="sigmoid"))
 
 model.summary()
+
+model.compile(loss="binary_crossentropy",
+              optimizer=optimizers.RMSprop(lr=1e-4),
+              metrics=["acc"])
