@@ -32,17 +32,17 @@ def add_sample(cat, fname):
     X.append(data)
     Y.append(cat)
 
-#
+# ini.
 allfiles = []
 
-#
+# append
 for idx, cat in enumerate(categories):
     image_dir = root_dir + "/" + cat
     files = glob.glob(image_dir + "/*.jpg")
     for f in files:
         allfiles.append((idx, f))
 
-#
+# data
 random.shuffle(allfiles)
 th = math.floor(len(allfiles) * 0.8)
 train = allfiles[0:th]
@@ -50,5 +50,6 @@ test  = allfiles[th:]
 X_train, y_train = make_sample(train)
 X_test, y_test = make_sample(test)
 xy = (X_train, X_test, y_train, y_test)
+
 # tea_data.npy
 np.save("data/tea_data.npy", xy)
