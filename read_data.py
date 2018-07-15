@@ -4,7 +4,7 @@ import numpy as np
 import random, math
 
 #
-root_dir = "~/visions"
+root_dir = "~/visions/."
 # product name
 categories = ["Coca","Pepsi","Fanta","Cider",
               "MountineView","OranC","Pocari","GreenTea",
@@ -32,7 +32,7 @@ def add_sample(cat, fname):
     X.append(data)
     Y.append(cat)
 
-# ini.
+# initialize
 allfiles = []
 
 # append
