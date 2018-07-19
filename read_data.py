@@ -15,7 +15,7 @@ X = []
 # Picture's label
 Y = []
 
-#
+# make sample 
 def make_sample(files):
     global X, Y
     X = []
@@ -23,7 +23,7 @@ def make_sample(files):
     for cat, fname in files:
         add_sample(cat, fname)
     return np.array(X), np.array(Y)
-#
+# add sample 
 def add_sample(cat, fname):
     img = Image.open(fname)
     img = img.convert("RGB")
