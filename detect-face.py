@@ -2,7 +2,7 @@ import cv2
 import matplotlib.pyplot as plt
 %matplotlib inline
 
-# imagr read
+# image read (imread)
 src_image = cv2.imread('lenna.jpeg')
 # convert gray 
 dst_image = cv2.cvtColor(src_image,cv2.COLOR_RGB2GRAY)
